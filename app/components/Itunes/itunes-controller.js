@@ -7,43 +7,63 @@ const itunesService = new ItunesService()
 function drawSongs(results) {
   console.log(results)
   //YOUR CODING STARTS HERE
-  let template = `<div class="accordion" id="accordionExample">`
+  let template = `<div class="accordion row" id="accordionExample">`
   for (let i = 0; i < results.length; i++) {
     const song = results[i];
     if (i == 0) {
       template += `
-      <div class="card">
-      <div class="card-header" id="heading${i}">
-      <h5 class="mb-0">
-      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#h${i}" aria-expanded="true" aria-controls="h${i}">
-      ${song.artist} ${song.title} ${song.price}
-      </button>
-      </h5>
-      </div>
+      <div class="card col-sm-6 offset-sm-3 bg-dark">
+        <div class="card-header" id="heading${i}">
+          <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#h${i}" aria-expanded="true" aria-controls="h${i}">
+          ${song.artist} - ${song.title} 
+          </button>
+            <span class="badge badge-light float-right">$${song.price}</span>
+          </h5>
+        </div>
       
-      <div id="h${i}" class="collapse show" aria-labelledby="heading${i}" data-parent="#accordionExample">
-      <div class="card-body">
-      ${song.collection} ${song.albumArt} ${song.preview}
-      </div>
-      </div>
+        <div id="h${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordionExample">
+          <div class="card-body text-center">
+            <div class="mb-1">
+            ${song.collection} 
+            </div>
+            <div class="mb-2">
+              <img src="${song.albumArt}" /> 
+            </div>
+            <audio controls>
+              <source src="${song.preview}" type="audio/ogg">
+              <source src="${song.preview}" type="audio/mpeg"> Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
       </div>
       `
     } else {
       template += `
-      <div class="card">
-      <div class="card-header" id="heading${i}">
-      <h5 class="mb-0">
-      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#h${i}" aria-expanded="false" aria-controls="h${i}">
-      ${song.artist} ${song.title} ${song.price}
-      </button>
-      </h5>
-      </div>
-      
+      <div class="card col-sm-6 offset-sm-3 bg-dark">
+        <div class="card-header" id="heading${i}">
+          <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#h${i}" aria-expanded="false" aria-controls="h${i}">
+          ${song.artist} - ${song.title} 
+          </button>
+            <span class="badge badge-light float-right">$${song.price}</span>
+          </h5>
+        </div>
+
       <div id="h${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordionExample">
-      <div class="card-body">
-      ${song.collection} ${song.albumArt} ${song.preview}
-      </div>
-      </div>
+        <div class="card-body text-center">
+          <div class="mb-1">
+            ${song.collection} 
+          </div>
+          <div class="mb-2">
+            <img src="${song.albumArt}" /> 
+          </div>
+            <audio controls>
+              <source src="${song.preview}" type="audio/ogg">
+              <source src="${song.preview}" type="audio/mpeg"> Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
       </div>
       `
     }

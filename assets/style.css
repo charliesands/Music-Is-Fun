@@ -1,0 +1,27 @@
+body {
+  background-image: url(/assets/Do33llv.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+}
+
+#accordionExample {
+  color: antiquewhite;
+}
+
+.btn-link {
+  color: antiquewhite;
+  font-size: large;
+}
+
+.btn-link:hover {
+  color: darkgrey;
+}
+
+.badge-light {
+  background-color: antiquewhite;
+}
+
+.card-body {
+  font-size: large;
+}
