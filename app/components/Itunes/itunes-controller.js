@@ -22,7 +22,7 @@ function drawSongs(results) {
           </h5>
         </div>
       
-        <div id="h${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordionExample">
+        <div id="h${i}" class="collapse show" aria-labelledby="heading${i}" data-parent="#accordionExample">
           <div class="card-body text-center">
             <div class="mb-1">
             ${song.collection} 
