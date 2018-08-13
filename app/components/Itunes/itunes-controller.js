@@ -99,24 +99,6 @@ class ItunesController {
       $('#get-music-button').text('GET MUSIC');
     })
   }
-
-
 }
-
-//     <ul id="song-list" class="p-2 flex-fill bg-light align-content-space-between list-group w-25">
-//       <li class="list-group-item">${song.artist}</li>
-//       <li class="list-group-item">${song.title}</li>
-//       <li class="list-group-item">${song.collection}</li>
-//       <li class="list-group-item">
-//         <img src="${song.albumArt}" />
-//       </li>
-//      <li class="list-group-item">
-//         <audio controls>
-//             <source src="${song.preview}" type="audio/ogg">
-//             <source src="${song.preview}" type="audio/mpeg"> Your browser does not support the audio element.
-//         </audio>
-//       </li>
-//     <li class="list-group-item">${song.price}</li>
-// </ul>
 
 export default ItunesController
